@@ -1,15 +1,22 @@
 # teleboard for Hoverboard
 Generic Keyboard Teleop for ROS
+#note :mohamed hanon , if nothing work or
+Couldn't find executable named 'example1_a' below /home/MYNAME/catkin_ws/src/learningROS/chapter2_tutorials
+please make tele_board.py as executable file by
+
+```
+~/$ chmod 777 tele_board.py
+```
 
 # Launch
 Run.
 ```
-rosrun teleboard teleboard.py
+rosrun tele_board tele_board.py
 ```
 
 With custom values.
 ```
-rosrun teleboard teleboard.py _speed:=0.9 _turn:=0.8
+rosrun tele_board tele_board.py _speed:=0.9 _turn:=0.8
 ```
 
 Publishing to a different topic (in this case `my_cmd_vel`).
@@ -52,7 +59,7 @@ If your mobile base requires constant updates on the cmd\_vel topic, teleop\_twi
 For example, to repeat the last command at 10Hz:
 
 ```
-rosrun teleboard teleboard.py _repeat_rate:=10.0
+rosrun tele_board tele_board.py _repeat_rate:=10.0
 ```
 
 It is _highly_ recommened that the repeat rate be used in conjunction with the key timeout, to prevent runaway robots.
@@ -63,7 +70,7 @@ Teleop\_twist\_keyboard can be configured to stop your robot if it does not rece
 
 For example, to stop your robot if a keypress has not been received in 0.6 seconds:
 ```
-rosrun hoverboard_teleop hoverboard_teleop.py _key_timeout:=0.6
+rosrun tele_board tele_board.py _key_timeout:=0.6
 ```
 
 It is recommended that you set `key_timeout` higher than the initial key repeat delay on your system (This delay is 0.5 seconds by default on Ubuntu, but can be adjusted).
@@ -71,5 +78,5 @@ It is recommended that you set `key_timeout` higher than the initial key repeat 
 # Twist with header
 Publishing a `TwistStamped` message instead of `Twist` can be enabled with the `stamped` private parameter. Additionally the `frame_id` of the `TwistStamped` message can be set with the `frame_id` private parameter.
 ```
-rosrun hoverboard_teleop hoverboard_teleop.py _stamped:=True _frame_id:=base_link
+rosrun tele_board tele_board.py _stamped:=True _frame_id:=base_link
 ```
