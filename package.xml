@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>hoverboard_teleop</name>
+  <name>teleboard</name>
   <version>2.0.0</version>
   <description>Generic keyboard teleop for HoverBoard robots.</description>
 
