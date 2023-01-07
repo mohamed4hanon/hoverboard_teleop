@@ -1,21 +1,22 @@
-# hoverboard_teleop
+# teleboard for Hoverboard
 Generic Keyboard Teleop for ROS
 
 # Launch
 Run.
 ```
-rosrun hoverboard_teleop hoverboard_teleop.py
+rosrun teleboard teleboard.py
 ```
 
 With custom values.
 ```
-rosrun hoverboard_teleop hoverboard_teleop.py _speed:=0.9 _turn:=0.8
+rosrun teleboard teleboard.py _speed:=0.9 _turn:=0.8
 ```
 
 Publishing to a different topic (in this case `my_cmd_vel`).
-```
-Mohamed Hnaon Has edited every thing so that it uses for hoverboard only 
-```
+
+
+# Mohamed Hnaon Has edited every thing so that it uses for hoverboard only 
+
 
 # Usage
 ```
@@ -51,7 +52,7 @@ If your mobile base requires constant updates on the cmd\_vel topic, teleop\_twi
 For example, to repeat the last command at 10Hz:
 
 ```
-rosrun hoverboard_teleop hoverboard_teleop.py _repeat_rate:=10.0
+rosrun teleboard teleboard.py _repeat_rate:=10.0
 ```
 
 It is _highly_ recommened that the repeat rate be used in conjunction with the key timeout, to prevent runaway robots.
