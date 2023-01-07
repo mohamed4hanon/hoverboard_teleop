@@ -4,7 +4,7 @@ from __future__ import print_function
 
 import threading
 
-import roslib; roslib.load_manifest('teleop_twist_keyboard')
+import roslib; roslib.load_manifest('teleboard')
 import rospy
 
 from geometry_msgs.msg import Twist
@@ -199,7 +199,7 @@ def vels(speed, turn):
 if __name__=="__main__":
     settings = saveTerminalSettings()
 
-    rospy.init_node('teleop_twist_keyboard')
+    rospy.init_node('teleboard')
 
     speed = rospy.get_param("~speed", 0.5)
     turn = rospy.get_param("~turn", 1.0)
